@@ -1,20 +1,18 @@
 import os
 from qgis.core import QgsVectorFileWriter, QgsProject, QgsFeatureRequest
 
-user_input = '수정_gis5000_갓길이정_20m_32652_250610'
+user_input = 'ETC_S0_07_04_709280'
+expression = u'"도로명" = \'경부선\''
 output_filename = 'test.shp'
 
-def selectFeatures(user_input):
+def export_selected_features(user_input, expression, output_filename):
     layer_name = user_input
     input_layers = QgsProject.instance().mapLayersByName(layer_name)
     layer = input_layers[0]
 
-    expression = u'"url" LIKE \'%경부%\''
     layer.selectByExpression(expression)
 
-   
-def export_selected_features(layer, output_filename):
-    output_dir = r'C:\sjbang\도로공사이정데이터\test' # 내보낼 폴더 경로 (예: 'C:/Users/사용자명/Documents/QGIS_Output')
+    output_dir = r'C:\Users\sjbang\Desktop\블로그\정밀도로지도\ETC_도로중심선_1년_1년_2024' # 내보낼 폴더 경로 (예: 'C:/Users/사용자명/Documents/QGIS_Output')
     #output_filename = 'test_export_data.shp' # 내보낼 파일 이름 (확장자 포함)
     output_format = "ESRI Shapefile" # "ESRI Shapefile", "GPKG", "GeoJSON" 등 원하는 형식
     output_filepath = os.path.join(output_dir, output_filename)
@@ -25,7 +23,7 @@ def export_selected_features(layer, output_filename):
     QgsVectorFileWriter.writeAsVectorFormat(
         layer,
         output_filepath,
-        'utf-8',
+        'korean',
         driverName='ESRI Shapefile',
         onlySelected=True
     )
@@ -35,5 +33,4 @@ def export_selected_features(layer, output_filename):
     # 내보낸 레이어를 QGIS에 추가 (선택 사항)
     iface.addVectorLayer(output_filepath, os.path.basename(output_filepath), 'ogr')
 
-selectFeatures(user_input)
-export_selected_features(layer, output_filename)
+export_selected_features(user_input, expression, output_filename)
