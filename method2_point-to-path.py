@@ -3,7 +3,7 @@ from PyQt5.QtCore import QVariant
 
 fieldList = []
 
-user_file_path = 'C:/sjbang/Final/'
+user_file_path = r'C:\Users\sjbang\Desktop\블로그\정밀도로지도\pyqgis\ETC_도로중심선_1년_1년_2024\point-to-path' + '/'
 
 # # 1. refactor Field
 # # 현재 활성화된 레이어를 입력으로 사용
@@ -31,7 +31,7 @@ def refactorField(user_input):
         {
             'INPUT': input_layer,
             'FIELDS_MAPPING': fields_mapping,
-            'OUTPUT': r'C:\sjbang\test\Refactored Layer.shp'
+            'OUTPUT': r'C:\Users\sjbang\Desktop\블로그\정밀도로지도\pyqgis\ETC_도로중심선_1년_1년_2024\test\Refactored Layer.shp'
         }
     )
 

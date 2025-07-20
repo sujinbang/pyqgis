@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root year="2024">
+    <A1_NODE_001 name="주행경로노드" year="2025" div="ngii">
+
+    </A1_NODE_001>
+    <A2_LINK_002 name="주행경로링크" div="ngii" year="2025">
+
+    </A2_LINK_002>
+    <A3_DRIVEWAYSECTION_003 name="차도구간(교량)" div="ngii" year="2024">
+
+    </A3_DRIVEWAYSECTION_003>
+    <A3_DRIVEWAYSECTION_004 name="차도구간(터널)" div="ngii" year="2024">
+
+    </A3_DRIVEWAYSECTION_004>
+    <A3_DRIVEWAYSECTION_005 name="차도구간(지하차도)" div="ngii" year="2024">
+
+    </A3_DRIVEWAYSECTION_005>
+    <A3_DRIVEWAYSECTION_006 name="차도구간(고가차도)" div="ngii" year="2024">
+
+    </A3_DRIVEWAYSECTION_006>
+    <A3_DRIVEWAYSECTION_007 name="차도구간(IC)" div="ngii" year="2024">
+
+    </A3_DRIVEWAYSECTION_007>
+    <A3_DRIVEWAYSECTION_008 name="차도구간(JC)" div="ngii" year="2025">
+
+    </A3_DRIVEWAYSECTION_008>
+    <A4_SUBSIDIARYSECTION_009 name="부속구간(휴게소)" div="ngii" year="2025">
+
+    </A4_SUBSIDIARYSECTION_009>
+    <A4_SUBSIDIARYSECTION_010 name="부속구간(졸음쉼터)" div="ngii" year="2024">
+
+    </A4_SUBSIDIARYSECTION_010>
+    <A4_SUBSIDIARYSECTION_011 name="부속구간(버스정류장)" div="ngii" year="2024">
+
+    </A4_SUBSIDIARYSECTION_011>
+    <A4_SUBSIDIARYSECTION_012 name="부속구간(비상정차대)" div="ngii" year="2024">
+
+    </A4_SUBSIDIARYSECTION_012>
+    <A4_SUBSIDIARYSECTION_013 name="부속구간(POP)" div="ngii" year="2025">
+
+    </A4_SUBSIDIARYSECTION_013>
+    <A4_SUBSIDIARYSECTION_014 name="부속구간(긴급제동시설)" div="ngii" year="2024">
+
+    </A4_SUBSIDIARYSECTION_014>
+    <A5_PARKINGLOT_015 name="주차면" div="ngii" year="2025">
+
+    </A5_PARKINGLOT_015>
+    <AE_SLOPE_016 name="종단경사" div="ex" year="2024">
+
+    </AE_SLOPE_016>
+    <B1_SAFETYSIGN_017 name="교통안전표지" div="ngii" year="2024">
+
+    </B1_SAFETYSIGN_017>
+    <B2_SURFACELINEMARK_018 name="노면선표시" div="ngii" year="2025">
+
+    </B2_SURFACELINEMARK_018>
+    <B3_SURFACEMARK_019 name="노면안내표시" year="2025">
+
+    </B3_SURFACEMARK_019>
+    <BE_ROADSIGN_020 name="도로안내표지" div="ex" year="2024">
+
+    </BE_ROADSIGN_020>
+    <BE_VMS_021 name="도로전광표지(VMS)" div="ex" year="2024">
+
+    </BE_VMS_021>
+    <C2_KILOPOST_022 name="이정(거리표)" div="ngii" year="2024">
+
+    </C2_KILOPOST_022>
+    <C2_KILOPOST_023 name="이정(갓길이정)" div="ngii" year="2025">
+
+    </C2_KILOPOST_023>
+    <C3_VEHICLEPROTECTIONSAFETY_024 name="차량방호안전시설(중앙분리대)" year="2024">
+
+    </C3_VEHICLEPROTECTIONSAFETY_024>
+    <C3_VEHICLEPROTECTIONSAFETY_025 name="차량방호안전시설(방호울타리)" year="2024">
+
+    </C3_VEHICLEPROTECTIONSAFETY_025>
+    <C3_VEHICLEPROTECTIONSAFETY_026 name="차량방호안전시설(충격흡수시설)" year="2024">
+
+    </C3_VEHICLEPROTECTIONSAFETY_026>
+    <C4_SPEEDBUMP_027 name="과속방지턱" year="2024">
+
+    </C4_SPEEDBUMP_027>
+    <C5_HEIGHTBARRIER_028 name="높이장애물" year="2025">
+
+    </C5_HEIGHTBARRIER_028>
+    <C5_HEIGHTBARRIER_029 name="차로신호제어기(LCS)" year="2024">
+
+    </C5_HEIGHTBARRIER_029>
+    <DE_FACILDOT_030 name="제설시설" div="ex" year="2024">
+
+    </DE_FACILDOT_030>
+    <DE_INCLINE_031 name="사면(도로절개면)" div="ex" year="2024">
+
+    </DE_INCLINE_031>
+    <DE_INCLINE_032 name="사면(도로성토면)" div="ex" year="2024">
+
+    </DE_INCLINE_032>
+    <DE_FENCE_033 name="벽/울타리(석축)" div="ex" year="2024">
+
+    </DE_FENCE_033>
+    <DE_FENCE_034 name="벽/울타리(낙석방지시설)" div="ex" year="2024">
+
+    </DE_FENCE_034>
+    <DE_FENCE_035 name="벽/울타리(방음시설)" div="ex" year="2024">
+
+    </DE_FENCE_035>
+    <DE_FENCE_036 name="벽/울타리(옹벽)" div="ex" year="2024">
+
+    </DE_FENCE_036>
+    <DE_CCTV_037 name="CCTV" div="ex" year="2025">
+
+    </DE_CCTV_037>
+    <DE_LIGHT_038 name="가로등" div="ex" year="2024">
+
+    </DE_LIGHT_038>
+    <DE_TOLLGATE_039 name="요금소" div="ex" year="2024">
+
+    </DE_TOLLGATE_039>
+    <DE_VDS_040 name="차량검지기(VDS)" div="ex" year="2025">
+
+    </DE_VDS_040>
+    <DE_CULVERT_041 name="통로박스" div="ex" year="2024">
+
+    </DE_CULVERT_041>
+    <DE_ROAD_042 name="단위 도로면" div="ex" year="2025">
+
+    </DE_ROAD_042>
+    <DE_ROADPAVEMENT_043 name="단위 포장면" div="ex" year="2025">
+
+    </DE_ROADPAVEMENT_043>
+    <DE_DSRC_044 name="DSRC" div="ex" year="2025">
+
+    </DE_DSRC_044>
+    <DE_SOS_045 name="긴급전화" div="ex" year="2025">
+
+    </DE_SOS_045>
+    <EC01_A0020000_046 name="도로대장 총괄" div="road" year="2024">
+
+    </EC01_A0020000_046>
+    <ER16_A9990001_047 name="도로중심선교점" div="road" year="2024">
+
+    </ER16_A9990001_047>
+    <EC08_A0080000_048 name="교차시설" year="2024">
+
+    </EC08_A0080000_048>
+    <ER17_A9990002_049 name="오르막차로" year="2024">
+
+    </ER17_A9990002_049>
+    <ER20_C0076117_050 name="측구" year="2024">
+
+    </ER20_C0076117_050>
+    <ER21_C9070001_051 name="배수암거/배수관" year="2024">
+
+    </ER21_C9070001_051>
+    <ER30_C9070001_052 name="가로수" year="2024">
+
+    </ER30_C9070001_052>
+    <ER31_C0246120_053 name="지하매설물" year="2024">
+
+    </ER31_C0246120_053>
+    <ER32_C0246341_054 name="공동구" year="2024">
+
+    </ER32_C0246341_054>
+    <ER36_C9530009_055 name="생태통로" year="2024">
+
+    </ER36_C9530009_055>
+    <ER40_A999011_056 name="실연장" year="2024">
+
+    </ER40_A999011_056>
+    <ER41_A9990007_057 name="도로구역" year="2024">
+
+    </ER41_A9990007_057>
+    <ER42_A9990008_058 name="유료도로" year="2024">
+
+    </ER42_A9990008_058>
+    <ER43_A9990009_059 name="우회도로" year="2024">
+
+    </ER43_A9990009_059>
+    <ER44_A9990010_060 name="접도구역" year="2024">
+
+    </ER44_A9990010_060>
+    <ER45_A9990004_061 name="도로점용(점)" year="2024">
+
+    </ER45_A9990004_061>
+    <ER46_A9990005_062 name="도로점용(선)" year="2024">
+
+    </ER46_A9990005_062>
+    <ER47_A9990006_063 name="도로점용(면)" year="2024">
+
+    </ER47_A9990006_063>
+    <EC09_A0010000_064 name="차도부경계" year="2024">
+
+    </EC09_A0010000_064>
+    <ER49_A9990013_065 name="측점" year="2024">
+
+    </ER49_A9990013_065>
+</root>
