@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <A1_NODE_001 name="주행경로노드" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <NODETYPE type="String" length="2" constraint="Y" name="노드유형"/>
+    <ITSNODEID type="String" length="10" constraint="N" name="표준노드ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A1_NODE_001>
+  <A2_LINK_002 name="주행경로링크" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <ROADRANK type="String" length="1" constraint="Y" name="도로등급"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <LINKTYPE type="String" length="2" constraint="Y" name="차로유형"/>
+    <ROADNO type="String" length="5" constraint="N" name="노선번호"/>
+    <LANENO type="Number" length="2" constraint="Y" name="차로번호"/>
+    <FROMNODE type="String" length="14" constraint="Y" fk="Y" name="시점노드ID"/>
+    <TONODE type="String" length="14" constraint="Y" fk="Y" name="종점노드ID"/>
+    <LENGTH type="Float" length="16,2" constraint="Y" name="길이"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A2_LINK_002>
+  <A3_DRIVEWAYSECTION_003 name="차도구간(교량)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_003>
+  <A3_DRIVEWAYSECTION_004 name="차도구간(터널)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_004>
+  <A3_DRIVEWAYSECTION_005 name="차도구간(지하차도)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_005>
+  <A3_DRIVEWAYSECTION_006 name="차도구간(고가차도)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_006>
+  <A3_DRIVEWAYSECTION_007 name="차도구간(IC)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_007>
+  <A3_DRIVEWAYSECTION_008 name="차도구간(JC)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_008>
+  <A4_SUBSIDIARYSECTION_009 name="부속구간(휴게소)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="차도구간 유형"/>
+    <ROADTYPE type="String" length="1" constraint="Y" name="도로유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A3_DRIVEWAYSECTION_009>
+  <A4_SUBSIDIARYSECTION_010 name="부속구간(졸음쉼터)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <SUBTYPE type="String" length="2" constraint="Y" name="부속구간 유형"/>
+    <NAME type="String" length="30" constraint="Y" name="부속구간 명칭"/>
+    <DIRECTION type="String" length="1" constraint="Y" name="방향"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A4_SUBSIDIARYSECTION_010>
+  <A4_SUBSIDIARYSECTION_011 name="부속구간(버스정류장)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <SUBTYPE type="String" length="2" constraint="Y" name="부속구간 유형"/>
+    <NAME type="String" length="30" constraint="Y" name="부속구간 명칭"/>
+    <DIRECTION type="String" length="1" constraint="Y" name="방향"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A4_SUBSIDIARYSECTION_011>
+  <A4_SUBSIDIARYSECTION_012 name="부속구간(비상정차대)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <SUBTYPE type="String" length="2" constraint="Y" name="부속구간 유형"/>
+    <NAME type="String" length="30" constraint="Y" name="부속구간 명칭"/>
+    <DIRECTION type="String" length="1" constraint="Y" name="방향"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A4_SUBSIDIARYSECTION_012>
+  <A4_SUBSIDIARYSECTION_013 name="부속구간(POP)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <SUBTYPE type="String" length="2" constraint="Y" name="부속구간 유형"/>
+    <NAME type="String" length="30" constraint="Y" name="부속구간 명칭"/>
+    <DIRECTION type="String" length="1" constraint="Y" name="방향"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A4_SUBSIDIARYSECTION_013>
+  <A4_SUBSIDIARYSECTION_014 name="부속구간(긴급제동시설)" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <SUBTYPE type="String" length="2" constraint="Y" name="부속구간 유형"/>
+    <NAME type="String" length="30" constraint="Y" name="부속구간 명칭"/>
+    <DIRECTION type="String" length="1" constraint="Y" name="방향"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A4_SUBSIDIARYSECTION_014>
+  <A5_PARKINGLOT_015 name="주차면" div="ngii" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="2" constraint="Y" name="주차장유형"/>
+    <PGKG_SLOT type="Number" length="5" constraint="Y" name="주차면수"/>
+    <SUBSEC_ID type="String" length="14" constraint="Y" fk="Y" name="부속구간ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </A5_PARKINGLOT_015>
+  <AE_SLOPE_016 name="종단경사" div="ex" year="2025">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <CURVATURE type="Float" length="10,6" constraint="N" name="곡률"/>
+    <SLOPE type="Float" length="10,6" constraint="Y" name="구배"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </AE_SLOPE_016>
+  <B1_SAFETYSIGN_017 name="교통안전표지">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="표지별종류 "/>
+    <SUBTYPE type="String" length="6" constraint="Y" fk="Y" name="표지코드"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </B1_SAFETYSIGN_017>
+  <B2_SURFACELINEMARK_018 name="노면선표시">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="3" constraint="Y" name="선코드"/>
+    <SUBTYPE type="String" length="5" constraint="Y" name="선타입"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </B2_SURFACELINEMARK_018>
+  <B3_SURFACEMARK_019 name="노면안내표시">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="표시 형태"/>
+    <KIND type="String" length="4" constraint="Y" name="표시 종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </B3_SURFACEMARK_019>
+  <BE_ROADSIGN_020 name="도로안내표지">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="표지별종류 "/>
+    <SUBTYPE type="String" length="6" constraint="Y" name="표지종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </BE_ROADSIGN_020>
+  <BE_VMS_021 name="도로전광표지(VMS)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <HEIGHT type="Float" length="16,2" constraint="Y" name="높이"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </BE_VMS_021>
+  <C2_KILOPOST_022 name="이정(거리표)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="이정종류 "/>
+    <DISTANCE type="Float" length="10,4" constraint="Y" name="표지거리"/>
+    <ORIGN type="String" length="30" constraint="N" name="기준위치"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C2_KILOPOST_022>
+  <C2_KILOPOST_023 name="이정(갓길이정)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="이정종류 "/>
+    <DISTANCE type="Float" length="10,4" constraint="Y" name="표지거리"/>
+    <ORIGN type="String" length="30" constraint="N" name="기준위치"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C2_KILOPOST_023>
+  <C3_VEHICLEPROTECTIONSAFETY_024 name="차량방호안전시설(중앙분리대)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="2" constraint="Y" name="시설유형"/>
+    <SUBTYPE type="String" length="1" constraint="Y" name="중앙분리대여부"/>
+    <LOWHIGH type="String" length="1" constraint="Y" name="상단,하단"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C3_VEHICLEPROTECTIONSAFETY_024>
+  <C3_VEHICLEPROTECTIONSAFETY_025 name="차량방호안전시설(방호울타리)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="2" constraint="Y" name="시설유형"/>
+    <SUBTYPE type="String" length="1" constraint="Y" name="중앙분리대여부"/>
+    <LOWHIGH type="String" length="1" constraint="Y" name="상단,하단"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C3_VEHICLEPROTECTIONSAFETY_025>
+  <C3_VEHICLEPROTECTIONSAFETY_026 name="차량방호안전시설(충격흡수시설)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="2" constraint="Y" name="시설유형"/>
+    <SUBTYPE type="String" length="1" constraint="Y" name="중앙분리대여부"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C3_VEHICLEPROTECTIONSAFETY_SAF_026>
+  <C4_SPEEDBUMP_027 name="과속방지턱">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="시설유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C4_SPEEDBUMP_027>
+  <C5_HEIGHTBARRIER_028 name="높이장애물">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="시설유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </C5_HEIGHTBARRIER_028>
+  <C5_HEIGHTBARRIER_029 name="차로신호제어기(LCS)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </CE_LCS_029>
+  <DE_FACILDOT_030 name="제설시설">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="시설유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_FACILDOT_030>
+  <DE_INCLINE_031 name="사면(도로절개면)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MIN_HGHT type="Float" length="16,2" constraint="Y" name="최소 높이값"/>
+    <MAX_HGHT type="Float" length="16,2" constraint="Y" name="최대 높이값"/>
+    <AVG_HGHT type="Float" length="16,2" constraint="Y" name="평균 높이값"/>
+    <LENGTH type="Float" length="16,2" constraint="Y" name="길이"/>
+    <OWL_CNT type="Number" length="3" constraint="N" name="비탈면 올빼미 개수"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_INCLINE_031>
+  <DE_INCLINE_032 name="사면(도로성토면)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MIN_HGHT type="Float" length="16,2" constraint="Y" name="최소 높이값"/>
+    <MAX_HGHT type="Float" length="16,2" constraint="Y" name="최대 높이값"/>
+    <AVG_HGHT type="Float" length="16,2" constraint="Y" name="평균 높이값"/>
+    <LENGTH type="Float" length="16,2" constraint="Y" name="길이"/>
+    <OWL_CNT type="Number" length="3" constraint="N" name="비탈면 올빼미 개수"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_INCLINE_032>
+  <DE_FENCE_033 name="벽/울타리(석축)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_FENCE_033>
+  <DE_FENCE_034 name="벽/울타리(낙석방지시설)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_FENCE_034>
+  <DE_FENCE_035 name="벽/울타리(방음시설)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_FENCE_035>
+  <DE_FENCE_036 name="벽/울타리(옹벽)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="종류"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_FENCE_036>
+  <DE_CCTV_037 name="CCTV">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="분류코드"/>
+    <CCTV_NO type="String" length="20" constraint="N" name="CCTV번호"/>
+    <SUBTYPE type="String" length="1" constraint="Y" name="형태"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_CCTV_037>
+  <DE_LIGHT_038 name="가로등">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="시설유형"/>
+    <LAMPNO type="String" length="20" constraint="N" name="조명시설번호"/>
+    <DSTBXID type="String" length="20" constraint="N" name="분전함ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_LIGHT_038>
+  <DE_TOLLGATE_039 name="요금소">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <NAME type="String" length="100" constraint="N" name="요금소명"/>
+    <NUMBER type="Number" length="2" constraint="N" name="요금소 차로수"/>
+    <OFFICEID type="String" length="30" constraint="Y" name="영업소ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_TOLLGATE_039>
+  <DE_VDS_040 name="차량검지기(VDS)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="1" constraint="Y" name="시설유형"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_VDS_040>
+  <DE_CULVERT_041 name="통로박스">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_CULVERT_041>
+  <DE_ROAD_042 name="단위 도로면">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <LENGTH type="Float" length="16,2" constraint="Y" name="도로면 단위 길이"/>
+    <SPEED type="Number" length="3" constraint="Y" name="제한속도"/>
+    <ROAD_QLMT type="String" length="1" constraint="Y" name="도로재질"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_ROAD_042>
+  <DE_ROADPAVEMENT_043 name="단위 포장면">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_ROADPAVEMENT_043>
+  <DE_DSRC_044 name="DSRC">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_DSRC_044>
+  <DE_SOS_045 name="긴급전화">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </DE_SOS_045>
+  <EC01_A0020000_046 name="도로대장 총괄">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </EC01_A0020000_046>
+  <ER16_A9990001_047 name="도로중심선교점">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER16_A9990001_047>
+  <EC08_A0080000_048 name="교차시설">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </EC08_A0080000_048>
+  <ER17_A9990002_049 name="오르막차로">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER17_A9990002_049>
+  <ER20_C0076117_050 name="측구">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER20_C0076117_050>
+  <ER21_C9070001_051 name="배수암거/배수관">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER21_C9070001_051>
+  <ER30_C9070001_052 name="가로수">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <TYPE type="String" length="100" constraint="N" name="가로수 종류"/>
+    <NUMBER type="Number" length="8" constraint="N" name="가로수 수량"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER30_D0023372_052>
+  <ER31_C0246120_053 name="지하매설물">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER31_C0246120_053>
+  <ER32_C0246341_054 name="공동구">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER32_C0246341_054>
+  <ER36_C9530009_055 name="생태통로">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER36_C9530009_055>
+  <ER40_A999011_056 name="실연장">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER40_A9990011_056>
+  <ER41_A9990007_057 name="도로구역">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER41_A9990007_057>
+  <ER42_A9990008_058 name="유료도로">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER42_A9990008_058>
+  <ER43_A9990009_059 name="우회도로">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER43_A9990009_059>
+  <ER44_A9990010_060 name="접도구역">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER44_A9990010_060>
+  <ER45_A9990004_061 name="도로점용(점)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER45_A9990004_061>
+  <ER46_A9990005_062 name="도로점용(선)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER46_A9990005_062>
+  <ER47_A9990006_063 name="도로점용(면)">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER47_A9990006_063>
+  <EC09_A0010000_064 name="차도부경계">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <STPNT type="Float" length="10,4" constraint="N" name="시점이정"/>
+    <EDPNT type="Float" length="10,4" constraint="N" name="종점이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </EC09_A0010000_064>
+  <ER49_A9990013_065 name="측점">
+    <ID type="String" length="14" constraint="Y" pk="Y" name="ID"/>
+    <MNGM type="String" length="30" constraint="Y" name="관리지사"/>
+    <DATE type="String" length="8" constraint="Y" name="업데이트일자"/>
+    <REMARK type="String" length="30" constraint="N" name="비고"/>
+    <KMPOST type="Float" length="10,4" constraint="N" name="이정"/>
+    <SYSTEM_ID type="String" length="40" constraint="N" fk="Y" name="도로대장시설물ID"/>
+    <SRC_ID type="String" length="40" constraint="N" name="참조데이터ID"/>
+    <SRC_VER type="String" length="40" constraint="N" name="참조데이터 버전"/>
+    <SRC_TYPE type="String" length="40" constraint="N" name="참조데이터 유형"/>
+  </ER49_A9990013_065>
+</root>
