@@ -1,0 +1,2 @@
+icon 변경 후 resource 적용
+-- pyrcc5 resources.qrc -o resources.py
