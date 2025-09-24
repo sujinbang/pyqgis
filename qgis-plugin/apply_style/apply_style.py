@@ -25,7 +25,8 @@ from fileinput import filename
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction, QFileDialog
-from qgis.core import QgsProject, Qgis, QgsWkbTypes
+from qgis.core import QgsProject, Qgis, QgsWkbTypes, QgsTextFormat, QgsTextBufferSettings, QgsPalLayerSettings, QgsVectorLayerSimpleLabeling
+from PyQt5.QtGui import QColor, QFont
 from qgis.utils import iface
 
 # Initialize Qt resources from file resources.py
@@ -85,7 +86,6 @@ class ApplyStyle:
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
         return QCoreApplication.translate('ApplyStyle', message)
 
-
     def add_action(
         self,
         icon_path,
@@ -134,7 +134,6 @@ class ApplyStyle:
 
         # will be set False in run()
         self.first_start = True
-
 
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
@@ -191,6 +190,50 @@ class ApplyStyle:
                 # print(f"'{layer.name()}'은(는) 선 또는 폴리곤 레이어가 아닙니다. 라인 심볼 너비를 변경할 수 없습니다.")
                 self.iface.messageBar().pushMessage(f"'{layer.name()}'은(는) 선 또는 폴리곤 레이어가 아닙니다. 라인 심볼 너비를 변경할 수 없습니다.",level=Qgis.Warning, duration=3)
 
+    def get_layer_field_names(self, layer):
+
+        field_names = []
+        # 레이어의 필드 객체들을 가져옵니다.
+        fields = layer.fields()
+        for field in fields:
+            # 각 필드의 이름을 리스트에 추가합니다.
+            field_names.append(field.name())
+        
+        self.dlg.comboBox.clear()
+        self.dlg.comboBox.addItems([field_names[i] for i in range(len(field_names))])
+
+    def set_layer_labeling(self, layer_name):
+
+        input_layers = QgsProject.instance().mapLayersByName(layer_name)
+        layer = input_layers[0]
+
+        fontSize = self.dlg.lineEdit_2.text()
+        fontColor = self.dlg.lineEdit_3.text()
+        label_field_name = self.dlg.comboBox.currentText()
+
+        text_format = QgsTextFormat()
+        text_format.setFont(QFont("Arial"))
+        text_format.setSize(int(fontSize))
+        text_format.setColor(QColor(fontColor))
+        buffer_settings = QgsTextBufferSettings()
+        buffer_settings.setEnabled(True)
+        buffer_settings.setSize(1)
+        buffer_settings.setColor(QColor("gray"))
+        text_format.setBuffer(buffer_settings)
+        layer_settings = QgsPalLayerSettings()
+        layer_settings.setFormat(text_format)
+        layer_settings.fieldName = label_field_name
+        layer_settings.placement = QgsPalLayerSettings.Line
+        label_settings = QgsVectorLayerSimpleLabeling(layer_settings)
+        layer.setLabelsEnabled(True)
+        layer.setLabeling(label_settings)
+        layer.triggerRepaint()
+
+        # print(f"'{layer_name}' 레이어의 라벨이 '{label_field_name}' 필드로 설정되었습니다.")
+        # print("라벨링이 성공적으로 적용되었습니다!")
+        self.iface.messageBar().pushMessage(f"'{layer_name}' 레이어의 라벨이 '{label_field_name}' 필드로 설정되었습니다.",level=Qgis.Success, duration=3)
+        self.iface.messageBar().pushMessage("라벨링이 성공적으로 적용되었습니다!",level=Qgis.Success, duration=3)
+
     def run(self):
         """Run method that performs all the real work"""
 
@@ -199,9 +242,17 @@ class ApplyStyle:
         if self.first_start == True:
             self.first_start = False
             self.dlg = ApplyStyleDialog()
+            # tab1(line width)
             self.dlg.lineEdit.setText("2.0")  # 기본값 설정
             self.dlg.listWidget.addItems([layer.name() for layer in QgsProject.instance().mapLayers().values()])
             self.dlg.pushButton.clicked.connect(lambda: self.editSymbol(self.dlg.listWidget.currentItem().text()))
+            # tab2(label)
+            self.dlg.listWidget_2.addItems([layer.name() for layer in QgsProject.instance().mapLayers().values()])
+            self.dlg.listWidget_2.currentItemChanged.connect(lambda: self.get_layer_field_names(QgsProject.instance().mapLayersByName(self.dlg.listWidget_2.currentItem().text())[0]))
+            self.dlg.lineEdit_2.setText("12")  # font size 기본값 설정
+            self.dlg.lineEdit_3.setText("black")  # font color 기본값
+            self.dlg.pushButton_3.clicked.connect(lambda: self.set_layer_labeling(self.dlg.listWidget_2.currentItem().text()))
+            # 닫기버튼
             self.dlg.pushButton_2.clicked.connect(self.dlg.close)
 
         # show the dialog
@@ -212,7 +263,6 @@ class ApplyStyle:
         if result:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
-
             pass
 
 
