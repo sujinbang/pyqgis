@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/link_sync_flasher" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
