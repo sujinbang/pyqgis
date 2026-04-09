@@ -1,0 +1,24 @@
+# 1. 하위 폴더를 포함하여 모든 .shp 파일을 가져옵니다.
+# (필요에 따라 -match "육안검사" 또는 "ERR"을 추가하여 필터링 가능)
+$shpFiles = Get-ChildItem -Recurse -Filter "*.shp" | Where-Object { $_.FullName -match "SEC" }
+
+Write-Host "검사를 시작합니다..." -ForegroundColor Yellow
+
+$count = 0
+
+foreach ($shp in $shpFiles) {
+    # 동일한 이름의 .cpg 파일 경로 생성
+    $cpgPath = [System.IO.Path]::ChangeExtension($shp.FullName, ".cpg")
+
+    # .cpg 파일이 존재하는지 확인
+    if (-not (Test-Path $cpgPath)) {
+        # 파일이 없으면 "UTF-8" 내용을 담아 생성
+        # Out-File 대신 Set-Content를 사용하면 불필요한 공백/줄바꿈을 최소화할 수 있습니다.
+        Set-Content -Path $cpgPath -Value "UTF-8" -Encoding ASCII
+        
+        Write-Host "생성됨: $($shp.Name).cpg" -ForegroundColor Green
+        $count++
+    }
+}
+
+Write-Host "`n총 $count 개의 .cpg 파일이 새로 생성되었습니다." -ForegroundColor Cyan

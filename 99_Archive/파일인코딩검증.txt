@@ -1,0 +1,42 @@
+# 결과 저장용 리스트
+$results = New-Object System.Collections.Generic.List[PSCustomObject]
+
+# 현재 폴더 및 하위 폴더에서 .shp 파일 찾기 (이름에 "ERR" 또는 "육안검사" 포함 필터 가능)
+$shpFiles = Get-ChildItem -Recurse -Filter "*.shp" | Where-Object { $_.FullName -match "ERR" }
+
+foreach ($shp in $shpFiles) {
+    # 동일한 이름의 .cpg 파일 경로 생성
+    $cpgPath = [System.IO.Path]::ChangeExtension($shp.FullName, ".cpg")
+    $status = ""
+    $content = ""
+
+    if (Test-Path $cpgPath) {
+        # .cpg 파일이 있으면 내용을 읽음
+        $content = Get-Content $cpgPath -Raw -ErrorAction SilentlyContinue
+        $content = $content.Trim()
+        
+        if ($content -ieq "UTF-8") {
+            $status = "정상 (UTF-8)"
+        } else {
+            $status = "확인 필요 (현재: $content)"
+        }
+    } else {
+        # .cpg 파일이 없으면 QGIS에서 ISO-8859-1로 뜰 확률이 매우 높음
+        $status = "CPG 없음 (ISO-8859-1 기본값 적용 대상)"
+    }
+
+    # "정상"이 아닌 경우만 결과에 추가
+    if ($status -ne "정상 (UTF-8)") {
+        $results.Add([PSCustomObject]@{
+            "파일명" = $shp.Name
+            "상태"   = $status
+            "경로"   = $shp.FullName
+        })
+    }
+}
+
+# 결과 출력 및 저장
+$results | Out-GridView -Title "인코딩 확인이 필요한 SHP 파일 목록"
+$results | Export-Csv -Path "check_encoding_shp.csv" -NoTypeInformation -Encoding UTF8
+
+Write-Host "검사 완료! 'check_encoding_shp.csv' 파일을 확인하세요." -ForegroundColor Cyan
